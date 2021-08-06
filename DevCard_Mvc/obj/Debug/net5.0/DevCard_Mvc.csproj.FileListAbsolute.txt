@@ -38,3 +38,5 @@ G:\Asp.netTest\DevCard\DevCard_Mvc\obj\Debug\net5.0\DevCard_Mvc.pdb
 G:\Asp.netTest\DevCard\DevCard_Mvc\obj\Debug\net5.0\DevCard_Mvc.genruntimeconfig.cache
 G:\Asp.netTest\DevCard\DevCard_Mvc\obj\Debug\net5.0\DevCard_Mvc.csproj.CopyComplete
 G:\Asp.netTest\DevCard\DevCard_Mvc\obj\Debug\net5.0\Razor\Views\Home\Contact.cshtml.g.cs
+G:\Asp.netTest\DevCard\DevCard_Mvc\obj\Debug\net5.0\Razor\Views\Home\Components\Cars\_Cars.cshtml.g.cs
+G:\Asp.netTest\DevCard\DevCard_Mvc\obj\Debug\net5.0\Razor\Views\Home\Components\Articles\_Articales.cshtml.g.cs
