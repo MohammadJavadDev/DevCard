@@ -40,3 +40,5 @@ G:\Asp.netTest\DevCard\DevCard_Mvc\obj\Debug\net5.0\DevCard_Mvc.csproj.CopyCompl
 G:\Asp.netTest\DevCard\DevCard_Mvc\obj\Debug\net5.0\Razor\Views\Home\Contact.cshtml.g.cs
 G:\Asp.netTest\DevCard\DevCard_Mvc\obj\Debug\net5.0\Razor\Views\Home\Components\Cars\_Cars.cshtml.g.cs
 G:\Asp.netTest\DevCard\DevCard_Mvc\obj\Debug\net5.0\Razor\Views\Home\Components\Articles\_Articales.cshtml.g.cs
+G:\Asp.netTest\DevCard\DevCard_Mvc\obj\Debug\net5.0\Razor\Views\Shared\Footer.cshtml.g.cs
+G:\Asp.netTest\DevCard\DevCard_Mvc\obj\Debug\net5.0\Razor\Views\Shared\Header.cshtml.g.cs
