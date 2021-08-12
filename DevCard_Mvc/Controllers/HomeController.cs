@@ -1,18 +1,24 @@
-﻿using DevCard_Mvc.Models;
+﻿using System.Collections.Generic;
+using DevCard_Mvc.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System.Diagnostics;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace DevCard_Mvc.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+        private readonly List<Service> _services = new List<Service>
         {
-            _logger = logger;
-        }
+            new Service(0,"سرویس مورد نظر را انتخاب بفرمایید."),
+            new Service(1,"برنزی"),
+            new Service(2,"نقره ای"), 
+            new Service(3,"طلایی"),
+            new Service(4,"نیترو"),
+
+        };
 
         public IActionResult Index()
         {
@@ -21,7 +27,10 @@ namespace DevCard_Mvc.Controllers
         [HttpGet]
         public IActionResult Contact()
         {
-            var model = new Contact();
+            var model = new Contact()
+            {
+                Services = new SelectList(_services,"Id","Name","0")
+            };
             return View(model);
         }
 /*
@@ -34,15 +43,22 @@ namespace DevCard_Mvc.Controllers
         [HttpPost]
         public IActionResult Contact(Contact modelContact)
         {
+            modelContact.Services= new SelectList(_services, "Id", "Name", "0");
             if (!ModelState.IsValid)
             {
                 ViewBag.error = "اطلاعات وارد شده صحیح نمی باشد. دوباره تلاش کنید";
                 return View(modelContact);
             }
 
+            ModelState.Clear();
+             modelContact = new Contact()
+            {
+                Services = new SelectList(_services, "Id", "Name", "0")
+            };
+
             ViewBag.success = "پیام شما با موفقیت ارسال شد. ممنون از نظرات شما";
             
-            return View();
+            return View(modelContact);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
