@@ -1,11 +1,7 @@
 ﻿using DevCard_Mvc.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace DevCard_Mvc.Controllers
 {
@@ -22,10 +18,24 @@ namespace DevCard_Mvc.Controllers
         {
             return View();
         }
-
+        [HttpGet]
         public IActionResult Contact()
         {
-            return View();
+            var model = new Contact();
+            return View(model);
+        }
+/*
+        [HttpPost]
+        public JsonResult Contact(IFormCollection form)
+        {
+            var name = form["name"];
+            return Json(Ok());
+        }*/
+        [HttpPost]
+        public JsonResult Contact(Contact form)
+        {
+            
+            return Json(Ok());
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
