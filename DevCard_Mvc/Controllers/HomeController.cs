@@ -32,10 +32,17 @@ namespace DevCard_Mvc.Controllers
             return Json(Ok());
         }*/
         [HttpPost]
-        public JsonResult Contact(Contact form)
+        public IActionResult Contact(Contact modelContact)
         {
+            if (!ModelState.IsValid)
+            {
+                ViewBag.error = "اطلاعات وارد شده صحیح نمی باشد. دوباره تلاش کنید";
+                return View(modelContact);
+            }
+
+            ViewBag.success = "پیام شما با موفقیت ارسال شد. ممنون از نظرات شما";
             
-            return Json(Ok());
+            return View();
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
